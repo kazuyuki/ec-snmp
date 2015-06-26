@@ -98,7 +98,7 @@ if ( $opt eq "-n" ) {
 #
 # Processing OID
 #
-if ($oid =~ /$base_oid\.1\.(\d+)\.(\d+)\.(\d+)/){
+if ($oid =~ /$base_oid\.1\.(\d+)\.(\d+)\.(\d+)$/){
 	# index for failover-Group, group-Resource, resource-Detail(name & status)
 	my $gidx = $1;
 	my $ridx = $2;
@@ -119,7 +119,7 @@ if ($oid =~ /$base_oid\.1\.(\d+)\.(\d+)\.(\d+)/){
 		exit;
 	}
 }
-elsif ($oid =~ /$base_oid\.2\.(\d+)\.(\d+)/){
+elsif ($oid =~ /$base_oid\.2\.(\d+)\.(\d+)$/){
 	# index for monitor, detail (name & status)
 	my $midx = $1;
 	my $didx = $2;
