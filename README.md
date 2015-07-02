@@ -13,7 +13,11 @@
 	pass  .1.3.6.1.4.1.2021.255 /usr/bin/perl /opt/nec/clusterpro/bin/ec-snmp.pl
 	dlmod clusterManagementMIB /opt/nec/clusterpro/lib/libclpmgtmib.so
 
-(3) Type the following command.
+(2.1) Restart snmpd.
+
+	# systemctl restart snmpd.service
+
+(3) Type the following command to check the function.
 
 	# snmpget -v 2c localhost -c public .1.3.6.1.4.1.2021.255.1.1.1.1
 	UCD-SNMP-MIB::ucdavis.255.1.1.1.1 = STRING: "exec-B"
