@@ -1,4 +1,4 @@
-## Setup procedure
+ Setup procedure
 
 0. Prerequisite
 
@@ -55,25 +55,21 @@
 		UCD-SNMP-MIB::ucdavis.255.2.4.2 = STRING: "Online"
 		UCD-SNMP-MIB::ucdavis.255.2.5.1 = STRING: "userw"
 		UCD-SNMP-MIB::ucdavis.255.2.5.2 = STRING: "Online"
-<<<<<<< HEAD
 
 ## OID structure
 
-			     +--------- group resource table
-			     | +------- index of failover group
-			     | | +----- index of group resource in failover group
-			     | | | +--- 1:resource name 2:resource status
-			     | | | |
+		                     +--------- group resource table
+		                     | +------- index of failover group
+		                     | | +----- index of group resource in failover group
+		                     | | | +--- 1:resource name 2:resource status
+		                     | | | |
 
-	1.3.6.1.4.1.2021.255.1.1.1.1
+		1.3.6.1.4.1.2021.255.1.1.1.1
 
-			     +--------- monitor resource table
-			     | +------- index of monitor resource
-			     | | +----- 1:monitor name 2:monitor status
-			     | | |
+		                     +--------- monitor resource table
+		                     | +------- index of monitor resource
+		                     | | +----- 1:monitor name 2:monitor status
+		                     | | |
 
-	1.3.6.1.4.1.2021.255.2.1.1
+		1.3.6.1.4.1.2021.255.2.1.1
 
-=======
-	
->>>>>>> b37d30f5087f629395dabe888c5e1ae85096a022
