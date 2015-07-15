@@ -56,6 +56,20 @@
 		UCD-SNMP-MIB::ucdavis.255.2.5.1 = STRING: "userw"
 		UCD-SNMP-MIB::ucdavis.255.2.5.2 = STRING: "Online"
 
+		# snmpwalk -v 2c localhost -c public 1.3.6.1.4.1.119.2.3.207.1.2.3.1.1
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupIndex.1 = INTEGER: 1
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupIndex.2 = INTEGER: 2
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupName.1 = STRING: grp-A
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupName.2 = STRING: grp-B
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupComment.1 = STRING:
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupComment.2 = STRING:
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupType.1 = INTEGER: failover(1)
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupType.2 = INTEGER: failover(1)
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupStatus.1 = INTEGER: offline(3)
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupStatus.2 = INTEGER: online(2)
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupCurrentServerIndex.1 = INTEGER: -1
+		NEC-CLUSTER-MANAGEMENT-MIB::clusterGroupCurrentServerIndex.2 = INTEGER: 1
+
 ## OID structure
 
 		                     +--------- group resource table
