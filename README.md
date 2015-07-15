@@ -13,6 +13,9 @@
 
 		rocommunity  public
 		pass  .1.3.6.1.4.1.2021.255 /usr/bin/perl /opt/nec/clusterpro/bin/ec-snmp.pl
+
+		rocommunity  public
+		pass  .1.3.6.1.4.1.2021.255 /usr/bin/perl /opt/nec/clusterpro/bin/ec-snmp.pl
 		dlmod clusterManagementMIB /opt/nec/clusterpro/lib/libclpmgtmib.so
 
 3. Restart snmpd
@@ -52,6 +55,7 @@
 		UCD-SNMP-MIB::ucdavis.255.2.4.2 = STRING: "Online"
 		UCD-SNMP-MIB::ucdavis.255.2.5.1 = STRING: "userw"
 		UCD-SNMP-MIB::ucdavis.255.2.5.2 = STRING: "Online"
+<<<<<<< HEAD
 
 ## OID structure
 
@@ -70,3 +74,6 @@
 
 	1.3.6.1.4.1.2021.255.2.1.1
 
+=======
+	
+>>>>>>> b37d30f5087f629395dabe888c5e1ae85096a022
