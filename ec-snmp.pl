@@ -77,10 +77,10 @@ if ( $opt eq "-n" ) {
 	elsif ( $oid =~ /$base_oid\.1\.(\d+)$/ )               { $oid = $base_oid . ".1.$1.1.1"; }
 	elsif ( $oid =~ /$base_oid\.1\.(\d+)\.(\d+)$/ )        { $oid = $base_oid . ".1.$1.$2.1"; }
 	elsif ( $oid =~ /$base_oid\.1\.(\d+)\.(\d+)\.(\d+)$/ ) {
-		if    ( $3 < 2 )             { $oid = $base_oid . ".1.$1.$2." . ($3+1); }
-		elsif ( $2 < $#rscname + 1 ) { $oid = $base_oid . ".1.$1." . ($2+1) . ".1"; }
-		elsif ( $1 < $#grpname + 1 ) { $oid = $base_oid . ".1." . ($1+1) . ".1.1"; }
-		else                         { $oid = $base_oid . ".2.1.1"; }
+		if    ( $3 < 2 )			{ $oid = $base_oid . ".1.$1.$2." . ($3+1);}
+		elsif ( $2 < @{$rscname[($1 - 1)]} ) 	{ $oid = $base_oid . ".1.$1." . ($2+1) . ".1";}
+		elsif ( $1 < $#grpname + 1 ) 		{ $oid = $base_oid . ".1." . ($1+1) . ".1.1";}
+		else					{ $oid = $base_oid . ".2.1.1"; }
 	}
 	# for monitor resource
 	elsif ( $oid =~ /$base_oid\.2$/ )               { $oid = $base_oid . ".2.1.1"; }
