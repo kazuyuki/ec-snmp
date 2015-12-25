@@ -14,14 +14,27 @@ This document describes the procedure for stetting up EXPRESSCLUSTER X for net-s
 
 		/opt/nec/clusterpro/bin/ec-snmp.pl
 
-2. Modify /etc/snmp/snmpd.conf as below.
+2. Configure snmpd
 
+- In RHEL7.0, edit /etc/snmp/snmpd.conf to have below lines.
+
+		:
 		rocommunity  public
+		:
 		pass  .1.3.6.1.4.1.2021.255 /usr/bin/perl /opt/nec/clusterpro/bin/ec-snmp.pl
+		:
+
+- In RHEL6.5, edit /etc/snmp/snmpd.conf to have below lines.
+
+		:
+		view	systemview    included	 .1.3.6.1.4.1.2021.255
+		:
+		pass  .1.3.6.1.4.1.2021.255 /usr/bin/perl /opt/nec/clusterpro/bin/ec-snmp.pl
+		:
 
 3. Restart snmpd
 
-		# systemctl restart snmpd.service
+		# service snmpd restart
 
 4. Type the following command for testing.
 
@@ -98,4 +111,5 @@ This document describes the procedure for stetting up EXPRESSCLUSTER X for net-s
 ## Revision history
 
 	2015.06.25	miyamoto KAZuyuki	1st commit.
-	2015.11.19	miyamoto Kazuyuki	Supporting Cluster name, Server name and status, Group name, status and current server.
+	2015.11.19	miyamoto KAZuyuki	Supporting Cluster name, Server name and status, Group name, status and current server.
+	2015.12.25	miyamoto KAZuyuki	Supporting RHEL6.5 in addition to RHEL7.0
